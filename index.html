@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Center Aligned Title</title>
+<style>
+    body {
+        margin: 0 auto;
+        max-width: 950px; /* Adjust as needed */
+        padding: 20px;
+    }
+    h1 {
+        text-align: center;
+    }
+    .container {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+    }
+    .audio-column {
+        flex: 1;
+        margin: 0 10px;
+        text-align: left;
+		margin-bottom: 20px;
+    }
+    img {
+        width: 100%;
+        margin-top: 10px;
+    }
+</style>
+</head>
+<body>
+<h1>Evaluating Speaker-conditioned Target Speaker Extraction Algorithms for Hearing-Impaired Listeners</h1>
+<section>
+    <center>Ragini Sinha, Ann-Christin Scherer, Simon Doclo, Christian Rollwage, Jan Rennies</center>
+	
+    <p><b>Abstract:</b> Speaker-conditioned target speaker extraction algorithms aim at extracting the target speaker from a mixture of multiple speakers by using additional information about the target speaker. Previous studies have evaluated the performance of these algorithms using either instrumental measures or subjective assessments with normal-hearing listeners or with hearing-impaired listeners. Notably, a previous study employing a quasi-causal algorithm reported significant intelligibility improvements for both normal-hearing and hearing-impaired listeners, while another study demonstrated that a fully causal algorithm could enhance speech intelligibility and reduce listening effort for normal-hearing listeners. Building on these findings, this study focuses on an in-depth subjective assessment of two fully causal deep neural network-based speaker-conditioned target speaker extraction algorithms with hearing-impaired listeners, both without hearing loss compensation (unaided) and with linear hearing loss compensation (aided). Three different subjective performance measurement methods were used to cover a broad range of listening conditions, namely paired comparison, speech recognition thresholds, and categorically scaled perceived listening effort. The subjective evaluation results with fifteen hearing-impaired listeners showed that one algorithm significantly reduced listening effort and improved intelligibility compared to unprocessed stimuli and the other algorithm. The data also suggest that hearing-impaired listeners experience a greater benefit in terms of listening effort (for both male and female interfering speakers) and speech recognition thresholds, especially in the presence of female interfering speakers than normal-hearing listeners, and that hearing loss compensation (linear amplification) is not required to obtain an algorithm benefit.</p>
+  </section>
+
+<h1>Audio examples (German matrix sentences)</h1>
+<center>Both algorithms were trained on the WSJ0 dataset (English) with 101 different speakers</center>
+<center><b>One Male Interfering Speaker:</b></center>
+<div class="container">
+    <div class="audio-column">
+		<center><p>Unprocessed</p></center>
+        <audio controls>
+            <source src="03491_3_1male_unp.wav" type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+        
+    </div>
+    <div class="audio-column">
+		<center><p>Algo-1</center></p>
+        <audio controls>
+            <source src="03491_3_1male_algo1.wav" type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+        
+    </div>
+    <div class="audio-column">
+		<center><p>Algo-2</center></p>
+        <audio controls>
+            <source src="03491_3_1male_algo2.wav" type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+        
+    </div>
+</div>
+
+<center><b>One Female Interfering Speaker:</b></center>
+<div class="container">
+    <div class="audio-column">
+		<center><p>Unprocessed</center></p>
+        <audio controls>
+            <source src="F_74972_9_unp.wav" type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+        
+    </div>
+    <div class="audio-column">
+		<center><p>Algo-1</center></p>
+        <audio controls>
+            <source src="F_74972_9_algo1.wav" type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+        
+    </div>
+    <div class="audio-column">
+		<center><p>Algo-2</center></p>
+        <audio controls>
+            <source src="F_74972_9_algo2.wav" type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+        
+    </div>
+</div>
+
+<center><b>Two Male Interfering Speakers:</b></center>
+<div class="container">
+    <div class="audio-column">
+		<center><p>Unprocessed</center></p>
+        <audio controls>
+            <source src="74972_8_2male_unp.wav" type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+        
+    </div>
+    <div class="audio-column">
+		<center><p>Algo-1</center></p>
+        <audio controls>
+		
+            <source src="74972_8_2male_algo1.wav" type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+        
+    </div>
+    <div class="audio-column">
+	
+		<center><p>Algo-2</center></p>
+        <audio controls>
+            <source src="74972_8_2male_algo2.wav" type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+        
+    </div>
+</div>
+
+<center><b>Two Female Interfering Speakers:</b></center>
+<div class="container">
+    <div class="audio-column">
+		<center><p>Unprocessed</center></p>
+        <audio controls>
+            <source src="FF_47173_5_unp.wav" type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+        
+    </div>
+    <div class="audio-column">
+		<center><p>Algo-1</center></p>
+        <audio controls>
+            <source src="FF_47173_5_algo1.wav" type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+        
+    </div>
+    <div class="audio-column">
+		<center><p>Algo-2</center></p>
+        <audio controls>
+            <source src="FF_47173_5_algo2.wav" type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+        
+    </div>
+</div>
+
+<h1>Objective performance evaluations of Algo-1 and Algo-2:</h1>
+<center><p>The results shown here are obtained on test-set of the Librispeech dataset <a href="url">https://www.openslr.org/12</a></p></center>
+	<div class="container">
+    <div class="audio-column">
+		<center><img src="sdr_both.png" alt="SDR"></center>
+    </div>
+    <div class="audio-column">
+        <center><img src="pesq_both.png" alt="PESQ"></center>
+    </div>
+    <div class="audio-column">
+        <center><img src="stoi_both.png" alt="STOI"></center>
+    </div>
+</div>
+
+<h1>Subjective performance evaluations of Algo-1 and Algo-2 for normal-hearing(NH), and hearing-impaired listeners in both unaided and aided conditions:</h1>
+<center><p><b>1. Paired Comparisons: </b> percentage of wins in the paired comparison tests obtained for each pair of the three processing conditions (unprocessed, Algo-1, and Algo-2) for NH and HI listeners for stimuli having one interfering (F/M) and two interfering speaker(s) (FF/MM).</p></center>
+	<div>
+    <div class="plot">
+		<iframe src="PC_algo1vsunpr.html"
+			width="100%", height="500px"
+			frameboarder="0"></iframe>
+    </div>
+	<div class="plot">
+		<iframe src="PC_algo2vsunpr.html"
+			width="100%", height="500px"
+			frameboarder="0"></iframe>
+    </div>
+	<div class="plot">
+		<iframe src="PC_algos.html"
+			width="100%", height="500px"
+			frameboarder="0"></iframe>
+    </div>
+</div>
+
+<center><p><b>2. Speech Recognition Thresholds: </b> SRTs and corresponding benefits for NH and HI listeners for unprocessed stimuli and stimuli processed using Algo-1, and Algo-2. FF and MM represent two female and male interfering speakers, respectively.</p></center>
+	<div>
+    <div class="plot">
+		<iframe src="srt_plot.html"
+			width="100%", height="500px"
+			frameboarder="0"></iframe>
+    </div>
+	<div class="plot">
+		<iframe src="srt_plot_improvement.html"
+			width="100%", height="500px"
+			frameboarder="0"></iframe>
+    </div>
+</div>
+
+<center><p><b>3. Perceived Listening Effort: </b> perceived listening effort ratings and corresponding benefits for NH and HI listeners for unprocessed stimuli having one interfering speaker (F/M) and two interfering speakers (FF/MM) and stimuli processed using Algo-1, and Algo-2. F and M represents gender of the interfering speaker(s), F: female and M: male.</p></center>
+	<div>
+    <div class="plot">
+		<iframe src="le_plot.html"
+			width="100%", height="900px"
+			frameboarder="0"></iframe>
+    </div>
+	<div class="plot">
+		<iframe src="le_plot_effort.html"
+			width="100%", height="500px"
+			frameboarder="0"></iframe>
+    </div>
+</div>
+
+<h1>Participant-specific scores across each condition:</h1>
+<center><p><b>4. Participant-specific SRT distributions for NH and HI listeners (unaided and aided) with male and female interfering speakers across three processing types (Unprocessed, Algo-1, and Algo-2). Violin plots illustrate the score distribution and density, with boxes indicating the interquartile range and median. Individual data points on each violin plot represent individual participant scores, plotted using a swarmplot to show the spread of scores.</p></center>
+	<div class="container">
+    <div class="audio-column">
+		<center><img src="srtsscores.drawio.png" alt="SRTs"></center>
+    </div>
+</div>
+
+<center><p><b>5. Participant-specific listening effort benefit distributions for NH and HI listeners (unaided and aided) with one interfering speaker, comparing Algo-1 and Algo-2 against the unprocessed condition at each SNR. Violin plots illustrate the score distribution and density, with boxes indicating the interquartile range and median. Individual data points are omitted for clarity due to the six SNR groupings.</p></center>
+	<div class="container">
+    <div class="audio-column">
+		<center><img src="le1.drawio.png" alt="le1"></center>
+    </div>
+</div>
+
+<center><p><b>6. Participant-specific listening effort benefit distributions for NH and HI listeners (unaided and aided) with two interfering speakers, comparing Algo-1 and Algo-2 against the unprocessed condition at each SNR. Violin plots illustrate the score distribution and density, with boxes indicating the interquartile range and median. Individual data points are omitted for clarity due to the six SNR groupings.</p></center>
+	<div class="container">
+    <div class="audio-column">
+		<center><img src="le2.drawio.png" alt="le2"></center>
+    </div>
+</div>
+</body>
+</html>
+
